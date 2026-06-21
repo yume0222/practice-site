@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問合せ | 株式会社Grass Field</title>
+    <meta
+      name="description"
+      content="株式会社Grass Fieldのお問合せページです。"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="/"
+          ><img
+            src="../img/logo.svg"
+            alt="株式会社Grass Field"
+            width="210"
+            height="45"
+        /></a>
+      </h1>
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="メニューを開く"
+        aria-controls="gnav"
+        aria-expanded="false"
+      >
+        <span class="hamburger__line" aria-hidden="true"></span>
+      </button>
+      <nav id="gnav" class="gnav" aria-label="メインメニュー">
+        <ul class="gnav__list">
+          <li class="gnav__item">
+            <a href="/" class="gnav__link">Home</a>
+          </li>
+          <li class="gnav__item">
+            <a href="/service/" class="gnav__link">事業内容</a>
+          </li>
+          <li class="gnav__item">
+            <a href="/products/" class="gnav__link">商品紹介</a>
+          </li>
+          <li class="gnav__item">
+            <a href="/company/" class="gnav__link">会社概要</a>
+          </li>
+          <li class="gnav__item">
+            <a href="/recruit/" class="gnav__link">採用情報</a>
+          </li>
+          <li class="gnav__item">
+            <a href="/contact/" class="gnav__link" aria-current="page"
+              >お問合わせ</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mainContents">
+      <div class="pageHeaderM">
+        <div class="container">
+          <h1 class="pageHeaderM__ttl">
+            <span class="sub">Contact</span>
+            <span class="main">お問合せ</span>
+          </h1>
+          <p class="pageHeaderM__lead">
+            弊社の事業・商品へのご質問・お問い合わせ等は以下のフォームからご連絡下さい。
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="section">
+          <h2 class="headingM">お問合わせについて</h2>
+          <p>
+            通常、3営業日以内に担当者よりご連絡差し上げます。<br />
+            お急ぎの場合はお電話にてご連絡下さい。（TEL:
+            00-0000-0000　平日9:00〜17:00）
+          </p>
+        </section>
+        <section class="section">
+          <h2 class="headingM">お問合せフォーム</h2>
+          <form action="#" method="POST" id="form">
+            <!-- お問合せ種類 -->
+            <div class="inputItem">
+              <label for="contact_type" class="inputItem__label inputLabel"
+                >お問合せ種類<span class="require">必須</span></label
+              >
+              <div class="inputItem__body">
+                <div class="inputItem__field">
+                  <div class="selectWrap">
+                    <select name="contact_type" id="contact_type" required>
+                      <option value="" selected disabled>選択して下さい</option>
+                      <option value="弊社事業について">弊社事業について</option>
+                      <option value="弊社商品について">弊社商品について</option>
+                      <option value="採用について">採用について</option>
+                      <option value="メディア取材について">
+                        メディア取材について
+                      </option>
+                      <option value="その他のお問合せ">その他のお問合せ</option>
+                    </select>
+                  </div>
+                  <p class="errorText">お問合せ種類を選択してください。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- お問合せ内容 -->
+            <div class="inputItem">
+              <label for="contact_msg" class="inputItem__label inputLabel"
+                >お問合せ内容<span class="require">必須</span></label
+              >
+              <div class="inputItem__body">
+                <div class="inputItem__field">
+                  <textarea
+                    name="contact_msg"
+                    id="contact_msg"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <p class="errorText">お問合せ内容を入力してください。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- お名前 -->
+            <div class="inputItem">
+              <fieldset>
+                <legend>
+                  <span class="inputItem__label inputLabel">
+                    お名前<span class="require">必須</span>
+                  </span>
+                </legend>
+                <div class="inputItem__body">
+                  <div class="nameLayout">
+                    <div class="inputField">
+                      <label for="name1" class="inputSubLabel">姓</label>
+                      <input
+                        type="text"
+                        id="name1"
+                        name="name1"
+                        placeholder="山田"
+                        required
+                      />
+                      <p class="errorText">姓を入力してください。</p>
+                    </div>
+                    <div class="inputField">
+                      <label for="name2" class="inputSubLabel">名</label>
+                      <input
+                        type="text"
+                        id="name2"
+                        name="2"
+                        placeholder="太郎"
+                        required
+                      />
+                      <p class="errorText">名を入力してください。</p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- フリガナ -->
+            <div class="inputItem">
+              <fieldset>
+                <legend>
+                  <span class="inputItem__label inputLabel">
+                    フリガナ<span class="require">必須</span>
+                  </span>
+                </legend>
+                <div class="inputItem__body">
+                  <div class="nameLayout">
+                    <div class="inputField">
+                      <label for="kana1" class="inputSubLabel">セイ</label>
+                      <input
+                        type="text"
+                        id="kana1"
+                        name="kana1"
+                        placeholder="ヤマダ"
+                        pattern="^[\u30A0-\u30FF]+$"
+                        required
+                      />
+                      <p class="errorText">フリガナの姓を入力してください。</p>
+                    </div>
+                    <div class="inputField">
+                      <label for="kana2" class="inputSubLabel">メイ</label>
+                      <input
+                        type="text"
+                        id="kana2"
+                        name="kana2"
+                        placeholder="タロウ"
+                        pattern="^[\u30A0-\u30FF]+$"
+                        required
+                      />
+                      <p class="errorText">フリガナの名を入力してください。</p>
+                    </div>
+                  </div>
+                  <p class="inputNote">※全角カタカナでご入力下さい。</p>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="inputItem">
+              <label for="email" class="inputItem__label inputLabel"
+                >メールアドレス<span class="require">必須</span></label
+              >
+              <div class="inputItem__body">
+                <div class="inputItem__field">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="yamada@sample.co.jp"
+                    required
+                  />
+                  <p class="errorText">
+                    正しい形式のメールアドレスを入力してください。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 電話番号 -->
+            <div class="inputItem">
+              <label for="tel" class="inputItem__label inputLabel"
+                >電話番号<span class="require">必須</span></label
+              >
+              <div class="inputItem__body">
+                <div class="inputItem__field">
+                  <input
+                    type="tel"
+                    name="tel"
+                    id="tel"
+                    pattern="^\d{2,5}-?\d{2,4}-?\d{3,4}$"
+                    placeholder="09012345678"
+                    required
+                  />
+                  <p class="errorText">電話番号を入力してください。</p>
+                </div>
+                <p class="inputNote">
+                  ※半角数字でご入力下さい。ハイフン(-)は任意です。
+                </p>
+              </div>
+            </div>
+
+            <!-- 法人／個人 -->
+            <div class="inputItem">
+              <fieldset>
+                <legend>
+                  <span class="inputItem__label inputLabel">
+                    法人/個人<span class="require">必須</span>
+                  </span>
+                </legend>
+                <div class="inputItem__body">
+                  <div class="inputItem__field">
+                    <ul class="radioList_hr">
+                      <li>
+                        <label>
+                          <input
+                            type="radio"
+                            name="attribute"
+                            value="法人"
+                            checked
+                            required
+                          />
+                          <span>法人</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input
+                            type="radio"
+                            name="attribute"
+                            value="個人"
+                            required
+                          />
+                          <span>個人</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- 会社名 -->
+            <div class="inputItem">
+              <label for="company" class="inputItem__label inputLabel"
+                >会社名</label
+              >
+              <div class="inputItem__body">
+                <div class="inputItem__field">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="サンプル株式会社"
+                  />
+                  <p class="errorText">
+                    法人のお客様は会社名を入力してください。
+                  </p>
+                </div>
+                <p class="inputNote">
+                  ※法人のお客様の場合は必ずご記入ください。
+                </p>
+              </div>
+            </div>
+
+            <div class="privacyBox">
+              <p>
+                「<a href="#">プライバシーポリシー</a
+                >」をご確認いただき、個人情報の取扱いについて同意いただける場合は「同意する」を選択してください。
+              </p>
+              <div class="privacyBox__check">
+                <label>
+                  <input type="checkbox" name="agree" value="同意します" />
+                  <span>個人情報保護方針に同意する</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="formBtns">
+              <button class="buttonAction">入力内容を確認する</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <nav class="breadcrumb">
+      <ol class="breadcrumb__list">
+        <li><a href="/">ホーム</a></li>
+        <li>お問合せ</li>
+      </ol>
+    </nav>
+    <footer class="footer">
+      <ul class="footer__menu">
+        <li><a href="#">サイトポリシー</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="#">サイトマップ</a></li>
+      </ul>
+      <p class="footer__copyright">
+        <small lang="en">&copy; Sample All Rights Reserved.</small>
+      </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
